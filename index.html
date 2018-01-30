@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="app"></div>
+
+
+    <script>
+    
+    var Result = { "win": 1, "loss": 2, "tie": 3 }
+
+function PokerHand(hand) {
+
+hand = hand.split(' ');
+
+let handSeperate = [];
+
+let tmpScore = 0;
+
+
+for(let i = 0; i < hand.length; i++){
+  let newObj = {};
+  if(!isNaN(hand[i][0])){console.log('yippe')}
+  newObj.num = hand[i][0];
+  newObj.suit = hand[i][1];
+  handSeperate.push(newObj);
+}
+
+console.log(handSeperate)
+
+}
+
+let firstScore = 0;
+
+PokerHand.prototype.compareWith = function(hand){
+    return Result.tie;
+}
+    
+    </script>
+</body>
+</html>
